@@ -13,13 +13,13 @@ import java.util.Random;
 public class Servlet15 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Random random = new Random();
-        int[] numbers= new int[10];
-        for(int i=0;i<10;i++){
-            numbers[i]=random.nextInt(100)+1;
+        int[] numbers = new int[10];
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = random.nextInt(100) + 1;
         }
         response.getWriter().append(Arrays.toString(numbers));
         response.getWriter().append("\n");
         Arrays.sort(numbers);
         response.getWriter().append(Arrays.toString(numbers));
-        }
+    }
 }
