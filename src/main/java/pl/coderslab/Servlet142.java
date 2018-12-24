@@ -24,7 +24,7 @@ public class Servlet142 extends HttpServlet {
         response.setContentType("text/html; charset=utf-8");
         int id = Integer.parseInt(request.getParameter("id"));
         if (id < products.length) {
-            response.getWriter().append(products[id].replace(";"," - ")).append("zł");
+            response.getWriter().append(products[id].replace(";", " - ")).append("zł");
         } else {
             response.getWriter().append("Product not found.");
         }
