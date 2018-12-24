@@ -14,7 +14,6 @@ import java.util.Map;
 public class Servlet16 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, String> map = new HashMap<String, String>();
-
         Enumeration headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             String key = (String) headerNames.nextElement();
